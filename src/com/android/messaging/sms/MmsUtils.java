@@ -1156,7 +1156,9 @@ public class MmsUtils {
     public static SmsMessage getSmsMessageFromDeliveryReport(final Intent intent) {
         final byte[] pdu = intent.getByteArrayExtra("pdu");
         final String format = intent.getStringExtra("format");
-        return SmsMessage.createFromPdu(pdu, format);
+        return OsUtil.isAtLeastM()
+                ? SmsMessage.createFromPdu(pdu, format)
+                : SmsMessage.createFromPdu(pdu);
     }
 
     /**
@@ -1497,7 +1499,7 @@ public class MmsUtils {
                 cursor = SqliteWrapper.query(
                         context,
                         resolver,
-                        Telephony.Carriers.SIM_APN_URI,
+                        Telephony.Carriers.CONTENT_URI,
                         TEST_CARRIERS_PROJECTION,
                         null/*selection*/,
                         null/*selectionArgs*/,
