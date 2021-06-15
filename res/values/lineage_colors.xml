@@ -16,9 +16,9 @@
     limitations under the License.
 -->
 <resources>
-    <color name="lineage_accent">#2A475F</color>
-    <color name="button_text">#000000</color>
+    <color name="lineage_accent">#ffffff</color>
+    <color name="button_text">@color/textcolor</color>
 
-    <color name="navigation_bar_bg">@android:color/white</color>
+    <color name="navigation_bar_bg">#ffffff</color>
     <color name="navigation_bar_divider">#1f000000</color>
 </resources>

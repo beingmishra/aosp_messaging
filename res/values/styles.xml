@@ -94,6 +94,8 @@
     <style name="BugleActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
         <item name="height">@dimen/action_bar_height</item>
         <item name="displayOptions">showTitle</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:windowContentOverlay">@null</item>
         <item name="titleTextStyle">@style/BugleActionBarTitleTextStyle</item>
     </style>
 
@@ -179,7 +181,7 @@
 
     <style name="RecipientEditTextView">
         <item name="android:textSize">@dimen/recipient_edit_text_size</item>
-        <item name="android:textColor">@color/compose_contact_text</item>
+        <item name="android:textColor">@color/textcolor</item>
         <item name="android:textColorHint">@color/compose_contact_faint_text</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:paddingLeft">4dp</item>
@@ -187,7 +189,7 @@
     </style>
 
     <style name="PagerTabHeader">
-        <item name="android:textColor">@color/tab_text_color</item>
+        <item name="android:textColor">@color/textcolor</item>
         <item name="android:textSize">@dimen/pager_tab_header_text_size</item>
         <item name="android:background">@null</item>
         <item name="android:textStyle">bold</item>
